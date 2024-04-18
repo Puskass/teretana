@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GymQR - Sign In</title>
+    <link rel="stylesheet" href="/assets/styles/form.css" />
+    <link rel="stylesheet" href="/assets/styles/nav.css" />
+    <link rel="stylesheet" href="/index.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+    integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  </head>
+
+  <body>
+    
+      <nav>
+        <ul class="nav-bar">
+          <li class="logo">
+            <a href="../../index.html"><img src="/assets/images/gymLogo.jpg" alt="LOGO" /></a>
+          </li>
+          <input type="checkbox" id="check" />
+          <span class="menu">
+            <li><a href="/index.html">Početna</a></li>
+            <li><a href="/pages/about.html">O nama</a></li>
+            <li><a href="/pages/exercises.html">Vježbe</a></li>
+    
+            <li><a href="/pages/auth/signup.html">Napravi račun</a></li>
+            <label for="check" class="close-menu"><i class="fas fa-times"></i></label>
+          </span>
+          <label for="check" class="open-menu"><i class="fas fa-bars"></i></label>
+        </ul>
+      </nav>
+    
+    <form id="signInForm" class="block">
+      <h1>Prijavite se</h1>
+      <div class="group">
+        <input
+          type="email"
+          name="email"
+          id="email"
+          required
+        />
+        <label for="email">Email</label>
+      </div>
+      <div class="group">
+        <input
+          type="password"
+          name="password"
+          id="password"
+          required
+        />
+        <label for="password">Sifra</label>
+      </div>
+      <button type="submit">Potvrdi</button>
+      <p class="account-msg">
+        Nemaš profil? <a href="/pages/auth/signup.html">Napravi!</a>
+      </p>
+    </form>
+    <script type="module">
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-app.js";
+      // import {
+        // getDatabase,
+        // set,
+        // ref,
+        // child
+      // } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-database.js";
+      import {
+        getAuth,
+        signInWithEmailAndPassword,
+      } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-auth.js";
+
+      const firebaseConfig = {
+    apiKey: "AIzaSyAwJI5wuah9EcpQ3ESolWiBV1aVrU5m1Hw",
+    authDomain: "gympraksa.firebaseapp.com",
+    projectId: "gympraksa",
+    storageBucket: "gympraksa.appspot.com",
+    messagingSenderId: "655060592030",
+    appId: "1:655060592030:web:b20ea73c87bf707bdd228f"
+  };
+
+      const app = initializeApp(firebaseConfig);
+      // const db = getDatabase();
+      const auth = getAuth(app);
+      // const dbref = ref(db)
+
+      let email = document.getElementById("email");
+      let password = document.getElementById("password");
+      let mainForm = document.getElementById('signInForm')
+      
+      let SignInUser = (e) => {
+        e.preventDefault();
+
+        signInWithEmailAndPassword(auth, email.value, password.value)
+          .then((credentials) => {
+            alert(`Uspješno ste prijavljeni `)
+            // set(child(dbref, 'UsersAuthList/' + credentials.user.uid)).then(
+            //   snapshot => {
+            //     if(snapshot.exists){
+            //       sessionStorage.setItem("user-info", JSON.stringify({
+            //         firstname: snapshot.val().firstname,
+            //         lastname: snapshot.val().lastname
+            //       }))
+            //       sessionStorage.setItem('user-creds', JSON.stringify(credentials.user))
+                  window.location.href = 'index.html'
+            //     }
+            //   }
+            // )
+          })
+          .catch((err) => {
+            // alert(err.message);
+            // console.log(err.code);
+            console.log(err.message);
+          });
+      };
+      mainForm.addEventListener('submit', SignInUser)
+    </script>
+  </body>
+</html>

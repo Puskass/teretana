@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GymQR - Exercises</title>
+  <link rel="stylesheet" href="/assets/styles/nav.css" />
+  <link rel="stylesheet" href="/index.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+  integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+  crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="/assets/styles/carousel.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    .cards {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    a {
+      text-decoration-line: none;
+    }
+
+    .card {
+      display: flex;
+      align-items: center;
+      background-color: #fff;
+      border: 1px solid #e2e8f0;
+      border-radius: 0.375rem;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      transition: background-color 0.3s ease;
+      margin: 1rem;
+      max-width: 30rem;
+      /* Adjust the max-width as needed */
+    }
+
+    .card:hover {
+      background-color: #f7fafc;
+    }
+
+    .card img {
+      object-fit: cover;
+      width: 12rem;
+      /* Adjust the width as needed */
+      height: 12rem;
+      /* Adjust the height as needed */
+      border-top-left-radius: 0.375rem;
+      border-bottom-left-radius: 0.375rem;
+    }
+
+    .card-content {
+      flex: 1;
+      padding: 1rem;
+      text-align: left;
+    }
+
+    .card-content h5 {
+      margin-bottom: 0.5rem;
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #2d3748;
+      transition: color 0.3s ease;
+    }
+
+    .card-content p {
+      margin-bottom: 1rem;
+      font-size: 1rem;
+      color: #4a5568;
+      transition: color 0.3s ease;
+    }
+
+    .buy-btn {
+      padding: 0.4rem 1.2rem;
+      border: none;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      font-size: 0.875rem;
+      font-weight: 600;
+      text-align: center;
+      text-decoration: none;
+      color: #fff;
+      background-color: #4299e1;
+      border-radius: 0.375rem;
+      transition: background-color 0.3s ease;
+    }
+
+    .price {
+      color: #000;
+      font-weight: 600;
+    }
+  </style>
+</head>
+
+<body>
+  <nav>
+    <ul class="nav-bar">
+      <li class="logo">
+        <a href="../index.html"><img src="/assets/images/gymLogo.jpg" alt="LOGO" /></a>
+      </li>
+      <input type="checkbox" id="check" />
+      <span class="menu">
+        <li><a href="/index.html">Početna</a></li>
+        <li><a href="/pages/about.html">O nama</a></li>
+        <li><a href="/pages/exercises.html">Vježbe</a></li>
+
+        <li><a href="/pages/auth/signup.html">Napravi račun</a></li>
+        <label for="check" class="close-menu"><i class="fas fa-times"></i></label>
+      </span>
+      <label for="check" class="open-menu"><i class="fas fa-bars"></i></label>
+    </ul>
+  </nav>
+  <div class="cards">
+    <a href="#" class="card">
+      <img
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyE69FIm9nAA01-0YfPLlUUX8KISg30xIoC9gouA4gUG7vXp5B4kBT6T6VjRsJr-by1rM&usqp=CAU"
+        alt="" />
+      <div class="card-content">
+        <h5>Sklek</h5>
+        <p>
+          Klasična vježba koja cilja na grudi, tricepse i ramena. Počnite u položaju daske s rukama malo širim od širine
+          ramena.
+        </p>
+        <button class="buy-btn">Vise</button>
+      </div>
+    </a>
+    <a href="#" class="card">
+      <img
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyE69FIm9nAA01-0YfPLlUUX8KISg30xIoC9gouA4gUG7vXp5B4kBT6T6VjRsJr-by1rM&usqp=CAU"
+        alt="" />
+      <div class="card-content">
+        <h5>Sklek</h5>
+        <p>
+          Klasična vježba koja cilja na grudi, tricepse i ramena. Počnite u položaju daske s rukama malo širim od širine
+          ramena.
+        </p>
+        <button class="buy-btn">Vise</button>
+      </div>
+    </a>
+  </div>
+
+  <div id="window">
+    <div id="slide-container">
+      <div class="slides">
+        
+  <!-- First image --> 
+        <img class="slide" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCqAjYYKo1Z-ukpOSdVsQPndGEG1V48QLmBh3RkVA-w1HPiV7qYXph8ADmC194-QZKVzw&usqp=CAU"> 
+      </div>
+      
+  <!-- Second image --> 
+      <div class="slides">
+        <img class="slide" src="https://www.fitness.com.hr/images/articles/0e13ec41-e049-433c-8890-f0987a39ddb3.jpg"> 
+      </div>
+      
+   <!-- Third image --> 
+      <div class="slides">
+        <img class="slide" src="https://www.fitness.com.hr/images/articles/07f329ec-9114-4256-829c-076492669d9f.jpg"> 
+      </div>
+      <a id="previous" class="arrow">&#10094</a>
+      <a id="next" class="arrow">&#10095</a>
+      <div id="text-bar">
+        <p id="place"></p>
+      </div>
+    </div>
+    <div id="dotsContainer"></div>
+  </div>
+  <script src="../javascript/carousel.js"></script>
+</body>
+
+</html>

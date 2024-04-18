@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GymQR</title>
+    <link rel="stylesheet" href="./assets/styles/nav.css" />
+    <link rel="stylesheet" href="/index.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+      integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <style>
+      body {
+        overflow-y: hidden;
+      }
+
+      .hero-section {
+        display: flex;
+
+        justify-content: space-between;
+        align-items: center;
+        height: 100vh;
+        /* Set height to 100% of the viewport height */
+
+        margin: 0 auto;
+        padding: 2rem;
+        background-color: #fff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+      }
+
+      .hero-image {
+        flex: 1;
+        max-width: 50%;
+        border-radius: 8px;
+        overflow: hidden;
+      }
+
+      .hero-image img {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+      }
+
+      .hero-content {
+        flex: 1;
+        max-width: 45%;
+        padding: 0 2rem;
+      }
+
+      h1 {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+      }
+
+      p {
+        font-size: 1.25rem;
+        margin-bottom: 1.5rem;
+      }
+
+      .about-button {
+        display: inline-block;
+        padding: 1rem 2rem;
+        font-size: 1rem;
+        font-weight: 600;
+        text-align: center;
+        text-decoration: none;
+        color: #fff;
+        background-color: #4299e1;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      .about-button:hover {
+        background-color: #3182ce;
+      }
+
+      @media (max-width: 768px) {
+        .hero-section {
+          flex-direction: column;
+          height: auto;
+          padding: 2rem 1rem;
+        }
+
+        .hero-content,
+        .hero-image {
+          max-width: 100%;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <nav>
+      <ul class="nav-bar">
+        <li class="logo">
+          <a href="index.html"
+            ><img src="/assets/images/gymLogo.jpg" alt="LOGO"
+          /></a>
+        </li>
+        <input type="checkbox" id="check" />
+        <span class="menu">
+          <li><a href="/index.html">Početna</a></li>
+          <li><a href="/pages/about.html">O nama</a></li>
+          <li><a href="/pages/exercises.html">Vježbe</a></li>
+
+          <li><a href="/pages/auth/signup.html">Napravi račun</a></li>
+          <label for="check" class="close-menu"
+            ><i class="fas fa-times"></i
+          ></label>
+        </span>
+        <label for="check" class="open-menu"><i class="fas fa-bars"></i></label>
+      </ul>
+    </nav>
+
+    <div class="hero-section">
+      <div class="hero-image">
+        <img
+          src="https://www.planetfitness.com/sites/default/files/feature-image/personaltraine_513961.jpg"
+          alt="Hero Image"
+        />
+      </div>
+      <div class="hero-content">
+        <h1>GymQR</h1>
+        <p>
+          GymQR je web aplikacija koja transformira način na koji ljudi
+          pristupaju i praktikuju vježbanju u teretani.
+        </p>
+        <a href="/pages/about.html" class="about-button">O nama</a>
+      </div>
+    </div>
+  </body>
+</html>

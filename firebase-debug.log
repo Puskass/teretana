@@ -1,0 +1,37 @@
+[debug] [2024-03-07T10:22:58.121Z] ----------------------------------------------------------------------
+[debug] [2024-03-07T10:22:58.123Z] Command:       D:\cosov\Documents\nodejs\node.exe C:\Users\cosov\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js serve
+[debug] [2024-03-07T10:22:58.124Z] CLI Version:   13.4.0
+[debug] [2024-03-07T10:22:58.124Z] Platform:      win32
+[debug] [2024-03-07T10:22:58.124Z] Node Version:  v20.11.0
+[debug] [2024-03-07T10:22:58.124Z] Time:          Thu Mar 07 2024 11:22:58 GMT+0100 (Central European Standard Time)
+[debug] [2024-03-07T10:22:58.124Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-03-07T10:22:58.246Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-03-07T10:22:58.246Z] > authorizing via signed-in user (cosovictarik711@gmail.com)
+[debug] [2024-03-07T10:22:58.246Z] [iam] checking project gympraksa for permissions ["firebase.projects.get"]
+[debug] [2024-03-07T10:22:58.248Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/gympraksa:testIamPermissions [none]
+[debug] [2024-03-07T10:22:58.248Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/gympraksa:testIamPermissions x-goog-quota-user=projects/gympraksa
+[debug] [2024-03-07T10:22:58.248Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/gympraksa:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2024-03-07T10:22:59.088Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/gympraksa:testIamPermissions 200
+[debug] [2024-03-07T10:22:59.088Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/gympraksa:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2024-03-07T10:22:59.089Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/gympraksa [none]
+[debug] [2024-03-07T10:22:59.376Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/gympraksa 200
+[debug] [2024-03-07T10:22:59.376Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/gympraksa {"projectId":"gympraksa","projectNumber":"655060592030","displayName":"gympraksa","name":"projects/gympraksa","resources":{"hostingSite":"gympraksa"},"state":"ACTIVE","etag":"1_194023c0-c620-4b4d-810f-3aef6fdc60e9"}
+[info] 
+[info] === Serving from 'C:\Users\cosov\OneDrive\Radna površina'...
+[info] 
+[debug] [2024-03-07T10:22:59.379Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/gympraksa/sites 
+[debug] [2024-03-07T10:23:00.445Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/gympraksa/sites 200
+[debug] [2024-03-07T10:23:00.445Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/gympraksa/sites {"sites":[{"name":"projects/gympraksa/sites/gympraksa","defaultUrl":"https://gympraksa.web.app","appId":"1:655060592030:web:b20ea73c87bf707bdd228f","type":"DEFAULT_SITE"}]}
+[debug] [2024-03-07T10:23:00.445Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/gympraksa/webApps/1:655060592030:web:b20ea73c87bf707bdd228f/config [none]
+[debug] [2024-03-07T10:23:01.072Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/gympraksa/webApps/1:655060592030:web:b20ea73c87bf707bdd228f/config 200
+[debug] [2024-03-07T10:23:01.073Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/gympraksa/webApps/1:655060592030:web:b20ea73c87bf707bdd228f/config {"projectId":"gympraksa","appId":"1:655060592030:web:b20ea73c87bf707bdd228f","storageBucket":"gympraksa.appspot.com","apiKey":"AIzaSyAwJI5wuah9EcpQ3ESolWiBV1aVrU5m1Hw","authDomain":"gympraksa.firebaseapp.com","messagingSenderId":"655060592030"}
+[debug] [2024-03-07T10:23:01.077Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/gympraksa [none]
+[debug] [2024-03-07T10:23:01.283Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/gympraksa 200
+[debug] [2024-03-07T10:23:01.283Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/gympraksa {"projectId":"gympraksa","projectNumber":"655060592030","displayName":"gympraksa","name":"projects/gympraksa","resources":{"hostingSite":"gympraksa"},"state":"ACTIVE","etag":"1_194023c0-c620-4b4d-810f-3aef6fdc60e9"}
+[info] i  hosting[gympraksa]: Serving hosting files from: public {"metadata":{"emulator":{"name":"hosting"},"message":"Serving hosting files from: \u001b[1mpublic\u001b[22m"}}
+[info] +  hosting[gympraksa]: Local server: http://localhost:5000 {"metadata":{"emulator":{"name":"hosting"},"message":"Local server: \u001b[4m\u001b[1mhttp://localhost:5000\u001b[22m\u001b[24m"}}
+[info] i  hosting: ::1 - - [07/Mar/2024:10:23:06 +0000] "GET / HTTP/1.1" 200 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36" {"metadata":{"emulator":{"name":"hosting"},"message":"::1 - - [07/Mar/2024:10:23:06 +0000] \"GET / HTTP/1.1\" 200 - \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36\""}}
+[info] i  hosting: ::1 - - [07/Mar/2024:10:23:09 +0000] "GET /pages/about.html HTTP/1.1" 200 - "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36" {"metadata":{"emulator":{"name":"hosting"},"message":"::1 - - [07/Mar/2024:10:23:09 +0000] \"GET /pages/about.html HTTP/1.1\" 200 - \"http://localhost:5000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36\""}}
+[info] i  hosting: ::1 - - [07/Mar/2024:10:23:09 +0000] "GET /pages/exercises.html HTTP/1.1" 200 - "http://localhost:5000/pages/about.html" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36" {"metadata":{"emulator":{"name":"hosting"},"message":"::1 - - [07/Mar/2024:10:23:09 +0000] \"GET /pages/exercises.html HTTP/1.1\" 200 - \"http://localhost:5000/pages/about.html\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36\""}}
+[info] i  hosting: ::1 - - [07/Mar/2024:10:23:09 +0000] "GET /pages/auth/signin.html HTTP/1.1" 200 - "http://localhost:5000/pages/exercises.html" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36" {"metadata":{"emulator":{"name":"hosting"},"message":"::1 - - [07/Mar/2024:10:23:09 +0000] \"GET /pages/auth/signin.html HTTP/1.1\" 200 - \"http://localhost:5000/pages/exercises.html\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36\""}}
